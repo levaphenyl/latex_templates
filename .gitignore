@@ -1,0 +1,10 @@
+# TeX compilation artefacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.pdf
+*.run.xml
+*.synctex.gz

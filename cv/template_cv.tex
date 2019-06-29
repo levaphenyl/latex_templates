@@ -1,0 +1,93 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
+
+\documentclass[11pt,a4paper, sans]{moderncv}
+
+\moderncvcolor{blue}
+\moderncvstyle{oldstyle}
+\setlength{\hintscolumnwidth}{4.8cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage[left=1.3cm, right=1.3cm, top=1cm, bottom=1cm]{geometry}
+\usepackage{eurosym}
+
+\usepackage[style=numeric-comp, url=false, isbn=false, doi=false, backend=biber]{biblatex}
+\addbibresource{CV.bib}
+\defbibenvironment{bibliography}
+{\list
+	{\printtext[labelnumberwidth]{% label format from numeric.bbx
+			\printfield{labelprefix}%
+			\printfield{labelnumber}}}
+	{\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+		\setlength{\labelwidth}{\hintscolumnwidth}%
+		\setlength{\labelsep}{\separatorcolumnwidth}%
+		\leftmargin\labelwidth%
+		\advance\leftmargin\labelsep}%
+	\sloppy\clubpenalty4000\widowpenalty4000}
+{\endlist}
+{\item}
+
+\newcommand{\etal}{\textit{et al.\,}}
+\newcommand{\eg}{\textit{e.g.\,}}
+\newcommand{\ie}{\textit{i.e.\,}}
+
+% Fix size of the bibliography
+\renewcommand*{\bibfont}{\normalfont\small}
+
+
+\firstname{<first name>}
+\familyname{<last name>}
+\title{<desired function title>} 
+\address{<street>}{<city>} 
+\mobile{<phone number>} 
+\email{<email address>} 
+\social[linkedin]{<first-last-id>}
+\social[github]{<user name>}
+\photo[64pt][0.4pt]{CVpict}
+\extrainfo{
+	\textbf{* }<birth date>
+	~\\
+	\section{Languages}
+	\begin{description}
+		\item[English] obviously
+	\end{description}
+	~\\
+	\section{Tools}
+	\LaTeX, somehow\\
+	Git, as well\\
+	~\\
+	\section{Interests}
+	Linux
+	~\\
+	~\\
+	Recommendations upon\\request
+}
+
+
+\begin{document}
+\makecvtitle
+
+
+\section{Relevant experience}
+\cventry{\footnotesize <start date>$\rightarrow$<end date>}{<job title>}{<company>}{<location>}{}{
+	<general context sentence> The job included:
+	\begin{itemize}
+		\item been there,
+		\item done that.
+	\end{itemize}
+}
+
+
+\section{Education}
+\cventry{\footnotesize <start date>$\rightarrow$<end date>}{<study>}{<university>}{<location>}{<specialization>}{
+	I went to school. You need to cite the publication to make them appear! \cite{me2019}\\
+	Result: diploma with final grade/distinction in templates.
+}
+
+
+\printbibliography[title={Publications}]
+
+
+\end{document}
