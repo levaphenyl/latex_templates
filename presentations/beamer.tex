@@ -1,0 +1,47 @@
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{calc}  %% provides \widthof
+\usepackage[thicklines]{cancel} % for striketrough
+
+% Uncomment to use background from a picture.
+%\usebackgroundtemplate{%
+%    \includegraphics[width=\paperwidth,height=\paperheight]{background}}
+\definecolor{macqOrange}{RGB}{245, 128, 37}
+\definecolor{macqBlue}{RGB}{6, 119, 189}
+\definecolor{macqBlack}{RGB}{70, 70, 70}
+\definecolor{macqPurple}{RGB}{134, 69, 163}
+% Suppresses all navigation symbols
+\setbeamertemplate{navigation symbols}{}
+% Title progressing in footer
+\newlength{\progress}
+\setbeamertemplate{footline}{%
+    \setlength{\progress}{(\paperwidth-\widthof{\secname}-2cm)/\inserttotalframenumber* (\insertframenumber-1)}%
+    \hspace{\progress}\vspace{2pt}\color{gray}\secname\hfill\insertframenumber}
+\setbeamercolor{structure}{fg=macqBlack}
+\setbeamerfont{structure}{shape=\bfseries}
+\setbeamercolor{normal text}{fg=macqBlack}
+\setbeamercolor{alerted text}{fg=macqOrange}
+\setbeamercolor{example text}{fg=macqBlue}
+% Outer theming with lines
+\setbeamertemplate{frametitle}[default][left]
+\setbeamersize{sidebar width left=0.6cm, text margin left=0.4cm}
+
+\newcommand{\imagesource}[1]{\vspace{-0.5\baselineskip}{\color{gray}\tiny Source: #1}}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+\section{Templating\ldots}
+\subsection{presentations}
+\begin{frame}{\secname\subsecname}
+    Meow.
+\end{frame}
+
+\end{document}
+
